@@ -1,18 +1,46 @@
 import { useState } from "react";
 
-/* 
-  !Todo : cuando agregamos una lista de tarea, le mandmoasl informacion a la lista de tareas para lo muestre.
-*/
+/**
+  // error en cada renderizado es flase, 
+  let firstWork = false; 
+  * 
+      if(!firstWork) {
+        setListWork([{id:1 , name: homework}])
+        firstWork = true;
+      }
+
+  *
+  Corecto :
+  const firstWork = useRef(false);
+
+  if (!firstWork.current) {
+    // Solo entra la primera vez
+    setListWork([{id:1, name: homework}]);
+    firstWork.current = true;
+  }
+ */
+
 function Formulario(){
 
   const [homework,setHomework] = useState('tarea');
+  const [listWork,setListWork] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    //console.log(homework);
 
-    console.log(homework);
+    const nuevoProducto = {
+      id: listWork.length + 1,
+      name: homework,
+    };
+
+    const nuevaLista = [...listWork,nuevoProducto]
+    console.log(nuevaLista);
+    setListWork(nuevaLista);
+    setHomework('');
 
   }
+  
   
   return(<>
     <form onSubmit={handleSubmit}>
@@ -23,6 +51,7 @@ function Formulario(){
       <br />
       <button type='submit'>Agregar</button>
     </form>
+
   </>
   )
 }
