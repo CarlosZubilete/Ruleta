@@ -1,7 +1,9 @@
 import Tarea from "./Tarea";
-// import useAgregarTarea from "./useAgregarTarea";
 
 function ListaObjetos({list}){
+
+  //console.log('Largo de la lista: ', list.length);
+
   return(<>
     <ul>{
       list.map((element,i) => 
@@ -10,7 +12,6 @@ function ListaObjetos({list}){
         </li>)}
     </ul>
 
-    <button>Girar la ruleta</button>
   </>)
 }
 
