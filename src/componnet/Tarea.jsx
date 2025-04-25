@@ -1,14 +1,10 @@
 
-
-
-export default function Tarea({props}){
+export default function Tarea({tarea}){
   
-  const { tarea, id} = props;
-
-
+  const {id,name} = tarea;
+  
   return(<>
-    <p>Tarea: {id}</p>
-    <p>{tarea}</p>
+    <p>Tarea: {name}</p>
   </>
   )
 }

@@ -1,20 +1,16 @@
 import Tarea from "./Tarea";
-import useAgregarTarea from "./useAgregarTarea";
+// import useAgregarTarea from "./useAgregarTarea";
 
-function ListaObjetos(){
-
-  const {nuevaLista} = useAgregarTarea()
-
+function ListaObjetos({list}){
   return(<>
-    <h2>Lista de opciones</h2>
-
     <ul>{
-      nuevaLista.map((element,i) => 
+      list.map((element,i) => 
         <li key={i}>
           <Tarea  tarea={{id: element.id, name: element.name }} />  
-        </li>)
-      }
+        </li>)}
     </ul>
+
+    <button>Girar la ruleta</button>
   </>)
 }
 

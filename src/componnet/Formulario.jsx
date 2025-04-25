@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import ListaObjetos from "./ListaOpciones";
 /**
   // error en cada renderizado es flase, 
   let firstWork = false; 
@@ -20,9 +20,10 @@ import { useState } from "react";
   }
  */
 
+// !Todo : exportar la lista de objetos a un arhivo json , para que sea renderizado por otro componente... 
 function Formulario(){
 
-  const [homework,setHomework] = useState('tarea');
+  const [homework,setHomework] = useState('');
   const [listWork,setListWork] = useState([]);
 
   const handleSubmit = (event) => {
@@ -51,7 +52,7 @@ function Formulario(){
       <br />
       <button type='submit'>Agregar</button>
     </form>
-
+    <ListaObjetos list= {listWork} />
   </>
   )
 }
