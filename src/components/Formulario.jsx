@@ -36,8 +36,6 @@ function Formulario(){
     setResult(Math.floor(Math.random() * max))
   } 
 
-
-
   
   return(<>
     <form onSubmit={handleSubmit}>
