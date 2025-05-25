@@ -1,0 +1,16 @@
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+}
+
+.tarea-item {
+  padding: 0.5rem;
+  background-color: #3a3a3a;
+  margin-bottom: 0.3rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.tarea-item:hover {
+  background-color: #505050;
+}

@@ -1,0 +1,5 @@
+.resultado-texto {
+  font-weight: bold;
+  color: #00cc88;
+  transition: color 0.3s ease;
+}

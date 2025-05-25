@@ -1,0 +1,23 @@
+body {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+
+
+
+
+

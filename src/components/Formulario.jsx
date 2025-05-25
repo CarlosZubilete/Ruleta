@@ -1,8 +1,7 @@
 import { useState } from "react";
 import ListaObjetos from "./ListaOpciones";
 import Resultado from "./Resultado";
-
-
+import '../styles/Formulario.css';
 
 // !Todo : exportar la lista de objetos a un arhivo json , para que sea renderizado por otro componente... 
 function Formulario(){
@@ -37,22 +36,24 @@ function Formulario(){
   } 
 
   
-  return(<>
-    <form onSubmit={handleSubmit}>
-      <h2>Formulario</h2>
-      <label htmlFor='homework'>Tarea:
-        <input  type='text' name='homework' onChange={(e) => setHomework(e.target.value)}  value={homework} />
-      </label>
-      <br />
-      <button type='submit'>Agregar</button>
-    </form>
-    <ListaObjetos list= {listWork} />
-    <div>
-      <button type='submit' onClick={handleRandomInt}>Girar la rueda: </button>
-      <p>Resultado: {result}</p>
-      <Resultado  list={listWork} id={result}/>
-    </div>
-  </>
+  return(
+  <div className='fomulario-container'>
+      <form onSubmit={handleSubmit} className='formulario-form'>
+        <h2>Formulario</h2>
+        <label htmlFor='homework' className='formulario-label'>Tarea:
+          <input  type='text' className='formulario-input' name='homework' onChange={(e) => setHomework(e.target.value)}  value={homework} />
+        </label>
+        <button type='submit' className='formulario-button'>Agregar</button>
+      </form>
+
+      <ListaObjetos list= {listWork} />
+
+      <div className='ruleta'>
+        <button type='submit' onClick={handleRandomInt}>Girar la rueda</button>
+        <p>Resultado: {result}</p>
+        <Resultado  list={listWork} id={result}/>
+      </div>
+  </div>
   )
 }
 
