@@ -1,6 +1,7 @@
 import Tarea from "./Tarea";
+import '../styles/ListaTareas.css';
 
-function ListaObjetos({list}){
+function ListaTareas({list}){
 
   return(
     <ul className='lista-tareas'>
@@ -14,4 +15,4 @@ function ListaObjetos({list}){
   )
 }
 
-export default ListaObjetos;
+export default ListaTareas;

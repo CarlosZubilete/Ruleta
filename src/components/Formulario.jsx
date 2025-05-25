@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ListaObjetos from "./ListaOpciones";
+import ListaTareas from "./ListaTareas";
 import Resultado from "./Resultado";
 import '../styles/Formulario.css';
 
@@ -38,19 +38,20 @@ function Formulario(){
   
   return(
   <div className='fomulario-container'>
+    <h2 className='fomulario-container__title'>Ruleta</h2>
+
       <form onSubmit={handleSubmit} className='formulario-form'>
-        <h2>Formulario</h2>
         <label htmlFor='homework' className='formulario-label'>Tarea:
-          <input  type='text' className='formulario-input' name='homework' onChange={(e) => setHomework(e.target.value)}  value={homework} />
         </label>
+        <input  type='text' className='formulario-input' name='homework' onChange={(e) => setHomework(e.target.value)}  value={homework} />
         <button type='submit' className='formulario-button'>Agregar</button>
       </form>
 
-      <ListaObjetos list= {listWork} />
+      <ListaTareas list= {listWork} />
 
-      <div className='ruleta'>
-        <button type='submit' onClick={handleRandomInt}>Girar la rueda</button>
-        <p>Resultado: {result}</p>
+      <div className='ruleta-container'>
+        <button type='submit' className='ruleta-button' onClick={handleRandomInt}>Girar Rueda</button>
+        {/* <p className='ruleta-texto'>Resultado: {result}</p> */}
         <Resultado  list={listWork} id={result}/>
       </div>
   </div>

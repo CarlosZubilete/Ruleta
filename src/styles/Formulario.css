@@ -1,7 +1,14 @@
 .formulario-container {
-  /* border: 1px solid red; */
+  border: 1px solid aqua;
+  /* 
+  inset: 0;
+  position: absolute;
+  */
+  width: 100%; 
   display: flex;
   flex-direction: column;
+  /* justify-content: center;
+  align-self: center; */
   gap: 1.5rem;
   background-color: #2a2a2a;
   padding: 2rem;
@@ -10,9 +17,33 @@
   transition: all 0.3s ease;
 }
 
-.formulario-form, .formulario-input, .formulario-button {
-  display: block;
-  margin: 0.5rem 0;
+.fomulario-container__title{
+  /* border: 1px solid red; */
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  user-select: none ;
+  letter-spacing: .8rem;
+  font-weight: 900;
+}
+
+.formulario-form{
+  /* border: 1px solid aqua; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: .5rem;
+}
+
+.formulario-label{
+  /* border: 1px solid red; */
+  width: 100%;
+  padding: .5rem;
+  /* text-align: left; */
+  font-weight: bold;
+  font-size: 1.1rem;
+  user-select: none;
+  letter-spacing: .1rem;
 }
 
 .formulario-input {
@@ -24,8 +55,9 @@
 }
 
 .formulario-button {
-  border: 1px solid red;
-  width: 100%;
+  /* border: 1px solid red; */
+  /* width: 80%; */
+  margin: 0 .5rem;
   padding: 0.6rem 1rem;
   border: none;
   border-radius: 6px;
@@ -39,10 +71,28 @@
   background-color: #005fa3;
 }
 
-.ruleta {
+.ruleta-container {
+  /* border: 1px solid red; */
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  min-height: 8rem;
 }
 
+.ruleta-button{
+  margin: 0 .5rem;
+  padding: 0.6rem 1rem;
+  max-width: 10rem; 
+  border: none;
+  border-radius: 6px;
+  background-color: #0041cc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.ruleta-button:hover {
+  background-color: #005fa3;
+}
