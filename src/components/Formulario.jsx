@@ -19,37 +19,25 @@ const MessageError = ({children}) =>{
 // !Todo : exportar la lista de objetos a un arhivo json , para que sea renderizado por otro componente... 
 function Formulario(){
 
-  const [homework,setHomework] = useState('');
+  // const [homework,setHomework] = useState('');
   const [listWork,setListWork] = useState([]);
   const[result,setResult] = useState(null);
 
-  /*const handleSubmit = (event) => {
-    event.preventDefault()
-    //console.log(homework);
-    const nuevoProducto = {
-      id: listWork.length + 1,
-      name: homework,
-    };
 
-    const nuevaLista = [...listWork,nuevoProducto]
-    console.log(nuevaLista);
-    setListWork(nuevaLista);
-    
-    setHomework('');
-  }*/
-  const handleFormik = (event) => {
-    console.log(event);
+  const handleFormik = (values) => {
+
+    console.log(values);
+
 
     const nuevoProducto = {
     id: listWork.length + 1,
-    name: homework,
+    name: values.tarea,
     };
 
     const nuevaLista = [...listWork,nuevoProducto]
     console.log(nuevaLista);
     setListWork(nuevaLista);
-    setHomework('');
-
+    values.tarea = '';
   };
 
   let max = listWork.length;
@@ -69,8 +57,8 @@ function Formulario(){
       >
       <Form >
         <div className='formulario-form'>
-          <label name="tarea" className='formulario-label'>Tarea:</label>
-          <Field name="tarea" className='formulario-input'/>
+          <label name='tarea' className='formulario-label'>Tarea:</label>
+          <Field name='tarea' className='formulario-input'/>
           <button type='submit' className='formulario-button'>Agregar</button>
         </div>
         <ErrorMessage name="tarea" component={MessageError}/>
@@ -84,13 +72,31 @@ function Formulario(){
       {/* <p className='ruleta-texto'>Resultado: {result}</p> */}
       <Resultado  list={listWork} id={result}/>
     </div>
+    
   </div>
   )
 }
 
+// TODO : ADD CONTEXTO AND PROVIDER , LOCAL STORE AND CSS RULETA.
+
 export default Formulario;
 
 /**
+   /*const handleSubmit = (event) => {
+    event.preventDefault()
+    //console.log(homework);
+    const nuevoProducto = {
+      id: listWork.length + 1,
+      name: homework,
+    };
+
+    const nuevaLista = [...listWork,nuevoProducto]
+    console.log(nuevaLista);
+    setListWork(nuevaLista);
+    
+    setHomework('');
+  }
+//////////////////////////
   <form onSubmit={handleSubmit} className='formulario-form'>
     <label htmlFor='homework' className='formulario-label'>Tarea:
     </label>
