@@ -1,0 +1,33 @@
+.tarea {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.tarea:hover {
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.seleccionado {
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+}
+
+.seleccionado:hover {
+  border-left: 4px solid red;
+}
+
+.botones {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tarea:hover .botones {
+  opacity: 1;
+  transform: translateX(0);
+}

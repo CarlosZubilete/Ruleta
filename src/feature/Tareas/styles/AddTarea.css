@@ -1,0 +1,9 @@
+/* AddTarea.css */
+input.form-control {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.alert {
+  font-size: 0.775rem;
+}

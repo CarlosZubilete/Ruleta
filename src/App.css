@@ -1,14 +1,12 @@
-.app-container {
-  /* border: 1px solid red; */
+.App {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  /* min-height: 100vh; */
-  /* min-width: 100%;  */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-
+/* main {
+  flex-grow: 1;
+} */
 
 
 
