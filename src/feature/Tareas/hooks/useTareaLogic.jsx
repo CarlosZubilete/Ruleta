@@ -18,6 +18,7 @@ const useTareaLogic = () => {
 
   // When the user saves a new value...
   const addTarea = (values,{resetForm}) => {
+    if(lista.length >= 12) return;
     const nuevaLista = [...lista, values.tarea];
     setLista(nuevaLista);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(nuevaLista));
