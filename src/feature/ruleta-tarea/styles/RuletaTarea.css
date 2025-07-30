@@ -1,21 +1,23 @@
 .ruleta-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .ruleta {
   margin: 0 auto;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   border: 8px solid #333;
-  transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 6s cubic-bezier(0.33, 1, 0.68, 1);
+  /* transition: transform 4s cubic-bezier(0.2, 0.8, 0.7, 0.99); */
   overflow: hidden;
 }
 
 .segmento {
   position: absolute;
+  /* border: 1px solid red; */
   width: 50%;
   height: 50%;
   top: 50%;
@@ -26,21 +28,31 @@
 
 .segmento span {
   position: absolute;
+  border: .5px dotted #efefef43;
+  border-left: none;
   top: -10px;
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 12px;
+  /* letter-spacing: .1rem; */
+  font-size: .9em;
   transform-origin: 0% 100%;
+  color: #fff;
+
 }
 
-/* .segmento:nth-child(odd) {
-  background-color: #fdd835;
+
+/*
+ .segmento:nth-child(odd) {
+  background-color: rgba(253, 216, 53, 0.8);
 }
 
 .segmento:nth-child(even) {
-  background-color: #4fc3f7;
-} */
+  background-color: rgba(79, 195, 247, 0.8);
+} 
+
+*/
+
 
 .btn-girar {
   margin-top: 20px;

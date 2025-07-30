@@ -3,7 +3,7 @@ import RuletaTareas from '../components/RuletaTarea';
 
 function PageRuleta() {
   return (
-    <Container className="pt-5">
+    <Container className="mt-5">
       <h2 className="text-center">Ruleta de tareas</h2>
       <RuletaTareas />
     </Container>

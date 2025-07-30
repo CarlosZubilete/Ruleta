@@ -19,13 +19,24 @@ function RuletaTareas() {
     const gradosPorSegmento = 360 / lista.length;
     const gradosDestino = 3600 + (360 - (seleccion * gradosPorSegmento)) - gradosPorSegmento / 2;
 
+    // Reiniciar animación
+    ruletaRef.current.style.transition = 'none';
+    ruletaRef.current.style.transform = 'rotate(0deg)';
+
+    // Forzar reflow para que el navegador aplique el cambio
+    void ruletaRef.current.offsetWidth;
+
     // Aplicar rotación con CSS
+    // // ruletaRef.current.style.transform = `rotate(${gradosDestino}deg)`;
+
+    // Aplicar nueva rotación con transición
+    ruletaRef.current.style.transition = 'transform 6s cubic-bezier(0.33, 1, 0.68, 1)';
     ruletaRef.current.style.transform = `rotate(${gradosDestino}deg)`;
 
     // Cuando termina la transición, permitimos otro giro
     setTimeout(() => {
       setGirando(false);
-    }, 4000); // debe coincidir con la duración del CSS
+    }, 6000); // debe coincidir con la duración del CSS
   };
 
   return (
