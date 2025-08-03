@@ -1,10 +1,11 @@
 import { Container } from 'reactstrap';
 import RuletaTareas from '../components/RuletaTarea';
+import '../styles/PageRuleta.css'
 
 function PageRuleta() {
   return (
-    <Container className="mt-5">
-      <h2 className="text-center">Ruleta de tareas</h2>
+    <Container>
+      <h2 className="text-center">Ruleta</h2>
       <RuletaTareas />
     </Container>
   );

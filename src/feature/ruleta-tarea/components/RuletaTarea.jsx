@@ -5,8 +5,8 @@ import '../styles/RuletaTarea.css'
 function RuletaTareas() {
   const { lista } = useTareaContext();
   const ruletaRef = useRef(null);
-  const [seleccionada, setSeleccionada] = useState(null);
   const [girando, setGirando] = useState(false);
+  const [seleccionada, setSeleccionada] = useState(null);
 
   const girarRuleta = () => {
     if (girando || lista.length === 0) return;
@@ -14,33 +14,25 @@ function RuletaTareas() {
     const seleccion = Math.floor(Math.random() * lista.length);
     setSeleccionada(seleccion);
     setGirando(true);
-
     // Cada segmento ocupa cierto ángulo (por ejemplo, si hay 6 tareas → 60° cada una)
     const gradosPorSegmento = 360 / lista.length;
     const gradosDestino = 3600 + (360 - (seleccion * gradosPorSegmento)) - gradosPorSegmento / 2;
-
     // Reiniciar animación
     ruletaRef.current.style.transition = 'none';
     ruletaRef.current.style.transform = 'rotate(0deg)';
-
     // Forzar reflow para que el navegador aplique el cambio
     void ruletaRef.current.offsetWidth;
 
-    // Aplicar rotación con CSS
-    // // ruletaRef.current.style.transform = `rotate(${gradosDestino}deg)`;
-
-    // Aplicar nueva rotación con transición
-    ruletaRef.current.style.transition = 'transform 6s cubic-bezier(0.33, 1, 0.68, 1)';
+    ruletaRef.current.style.transition = 'transform 6s ease-out';
     ruletaRef.current.style.transform = `rotate(${gradosDestino}deg)`;
 
-    // Cuando termina la transición, permitimos otro giro
     setTimeout(() => {
       setGirando(false);
-    }, 6000); // debe coincidir con la duración del CSS
+    }, 6000);
   };
 
   return (
-    <div className="ruleta-container">
+  <div className="ruleta-container">
       <div className="ruleta" ref={ruletaRef}>
         {lista.map((tarea, i) => {
           const rot = (360 / lista.length) * i;
@@ -48,7 +40,9 @@ function RuletaTareas() {
             <div
               key={i}
               className="segmento"
-              style={{ transform: `rotate(${rot}deg) skewY(-60deg)` }}
+              style={{ 
+                transform: `rotate(${rot}deg) skewY(-60deg)`,            
+              }}
             >
               <span style={{ transform: `skewY(60deg) rotate(${(360 / lista.length) / 2}deg)` }}>
                 {tarea.name || tarea}
@@ -65,8 +59,8 @@ function RuletaTareas() {
       {seleccionada !== null && !girando && (
         <p className="tarea-seleccionada">Tarea seleccionada: {lista[seleccionada].name || lista[seleccionada]}</p>
       )}
-    </div>
-  );
+    </div>)
 }
+
 
 export default RuletaTareas;
