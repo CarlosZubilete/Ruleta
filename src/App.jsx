@@ -10,7 +10,9 @@ function App() {
     <div className='App'>
       <Navbar />
       <TareaProvider>
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </TareaProvider>
       <Footer/>
     </div>
