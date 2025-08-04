@@ -9,8 +9,3 @@ const MessageError = ({ children }) => {
 };
 
 export default MessageError;
-
-/*
-
-<span color="danger" className="py-1 px-2 mt-1 mb-0">{children}</span>
-*/

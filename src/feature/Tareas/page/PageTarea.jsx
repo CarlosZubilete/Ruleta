@@ -11,7 +11,7 @@ function PageTarea(){
   const {addTarea} = useTareaContext();
 
   return (
-    <Container className="mt-5">
+    <Container>
       <AddTarea handleFormik={addTarea}/>
       <hr />
       <ListaTarea />

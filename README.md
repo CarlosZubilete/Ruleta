@@ -50,7 +50,7 @@ Desarrollé esta app como un desafío personal para:
 
 ## 💻 ¿Dónde probarla?
 
-👉 [**Ir a la app web en Netlify**](https://tu-app.netlify.app) _(coloca tu link real acá)_
+👉 [**Ir a la app web en Netlify**](https://ruleta-de-decisiones.netlify.app/)
 
 ---
 

@@ -1,21 +1,22 @@
 .ruleta {
   /* text-align: center;
   margin-top: 20px; */
+  width: 100%;
+  /* max-width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 2.5rem; */
-  padding: 1rem
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .ruleta__wheel {
   background: radial-gradient(circle at center, #0000004e 10%, #1e3c72 60%, #ffffff34 100%);
   margin: 0 auto;
   position: relative;
-  /* width: 450px;
-  height: 450px; */
   width: 25rem;
   height: 25rem;
+  aspect-ratio: 1 / 1; /* mantiene el círculo perfecto */
   border-radius: 50%;
   border: .625rem solid #333;
   transition: transform 6s cubic-bezier(0.33, 1, 0.68, 1);
@@ -84,4 +85,33 @@
 .btn-ruleta__btn-girar:active {
   transform: scale(0.97); /* al presionar, se encoge sutilmente */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 425px){
+  .ruleta__wheel {
+    width: 18rem;
+    height: 18rem;
+    aspect-ratio: 1 / 1; 
+  }
+    .ruleta__segment-text {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    font-weight: 600;
+    border-top: .3px dotted #1a1a1a;
+
+  }
+
+  .btn-ruleta__btn-girar {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .ruleta__wheel {
+    width: 16rem;
+    height: 16rem;
+    aspect-ratio: 1 / 1; 
+  }
 }
