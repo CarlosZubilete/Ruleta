@@ -1,0 +1,157 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #e0f7fa 0%, #ffffff 100%);
+}
+
+/* Hero */
+.home__hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  animation: fadeIn 1.2s ease-in;
+}
+.home__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.home__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.home__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #0288d1;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.home__cta:hover {
+  transform: scale(1.05);
+}
+.home__cta-icon {
+  margin-right: 0.5rem;
+}
+
+/* Features */
+.home__features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.home__feature {
+  flex: 1 1 200px;
+  max-width: 300px;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.home__feature:hover {
+  transform: translateY(-5px);
+}
+.home__feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.home__feature-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.home__feature-desc {
+  font-size: 1rem;
+}
+
+/* --- About / README --- */
+
+.home__info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.home__info--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home__about {
+  border-top: 1.5px solid #0288d1;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.home__subtitle{
+  /* border: 1px solid red; */
+  text-align: center;
+  font-size: 1.225rem;
+}
+
+.home__about-text{
+  /* border: 1px solid red; */
+  text-align: start;
+  font-size: 1.125rem;
+}
+
+.home__about-list {
+  /* border: 1px solid red; */
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.home__about-list li {
+  margin-bottom: 0.5rem;
+  text-align: start;
+}
+
+/* --- Tech --- */
+
+.home__tech-icons {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  color: #0288d1;
+}
+
+/* --- CTA Button --- */
+.home__cta--outline {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: 2px solid #0288d1;
+  color: #0288d1;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.home__cta--outline:hover {
+  background-color: #0288d1;
+  color: white;
+  transform: scale(1.05);
+}

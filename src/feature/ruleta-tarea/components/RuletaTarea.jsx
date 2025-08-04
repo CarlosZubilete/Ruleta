@@ -32,33 +32,45 @@ function RuletaTareas() {
   };
 
   return (
-  <div className="ruleta-container">
-      <div className="ruleta" ref={ruletaRef}>
-        {lista.map((tarea, i) => {
-          const rot = (360 / lista.length) * i;
-          return (
-            <div
-              key={i}
-              className="segmento"
-              style={{ 
-                transform: `rotate(${rot}deg) skewY(-60deg)`,            
-              }}
-            >
-              <span style={{ transform: `skewY(60deg) rotate(${(360 / lista.length) / 2}deg)` }}>
-                {tarea.name || tarea}
-              </span>
-            </div>
-          );
-        })}
-      </div>
+  <div className="ruleta">
 
-      <button className="btn-girar" onClick={girarRuleta} disabled={girando}>
-        {girando ? 'Girando...' : 'Girar'}
-      </button>
-
-      {seleccionada !== null && !girando && (
-        <p className="tarea-seleccionada">Tarea seleccionada: {lista[seleccionada].name || lista[seleccionada]}</p>
+    {/* {seleccionada !== null && !girando && (
+      <p className="ruleta__tarea-seleccionada ">Vamos a :   
+      {lista[seleccionada].name || lista[seleccionada]}
+      </p>
+    )} */}
+    <p className="ruleta__tarea-seleccionada">
+      {!girando && (
+        seleccionada !== null
+          ? `Vamos a ${lista[seleccionada].name || lista[seleccionada]}`
+          : 'Girar la rueda'
       )}
+    </p>
+
+    <div className="ruleta__wheel" ref={ruletaRef}>
+      {lista.map((tarea, i) => {
+        const rot = (360 / lista.length) * i;
+        return (
+          <div
+            key={i}
+            className="ruleta__segment"
+            style={{ 
+              transform: `rotate(${rot}deg) skewY(-60deg)`,            
+            }}
+          >
+            <span 
+              className='ruleta__segment-text'
+              style={{ transform: `skewY(60deg) rotate(${(360 / lista.length) / 2}deg)` }}>
+              {tarea.name || tarea}
+            </span>
+          </div>
+        );
+      })}
+    </div>
+
+      <button className="btn-ruleta__btn-girar" onClick={girarRuleta} disabled={girando}>
+        {girando ? 'Girando...' : 'Girar'}
+      </button>   
     </div>)
 }
 

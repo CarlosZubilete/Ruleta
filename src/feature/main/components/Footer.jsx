@@ -6,13 +6,18 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__content">
-        
+
         <div className="footer__section footer__about">
-          <h2 className="footer__title">About Me</h2>
-          <p className="footer__description">
-            En CZ Dev nos especializamos en crear soluciones que se adaptan a tu modelo de negocio y forma de trabajo.  
-            <br /><br />
-            Si buscas un desarrollador comprometido para impulsar tu proyecto, ¡conectemos!
+          <h2 className="footer__title">Contact Us</h2>
+          <p className="footer__location">Argentina - BsAs - Tigre</p>
+          <p className="footer__email">
+            <a href="mailto:carloszubiletesanchez@gmail.com" className="footer__link">
+              carloszubiletesanchez@gmail.com
+            </a>
+          </p>
+          <p className="footer__message">
+            Gracias por confiar en nuestro trabajo.<br />
+            Si buscas impulsar tu proyecto, ¡conectemos!
           </p>
         </div>
 
@@ -22,12 +27,12 @@ function Footer() {
             <li><Link to="/" className="footer__link">Home</Link></li>
             <li><Link to="/ruleta" className="footer__link">Ruleta</Link></li>
             <li><Link to="/lista" className="footer__link">Tareas</Link></li>
-            <li><a href="mailto:carloszubiletesanchez@gmail.com" className="footer__link">Contacto</a></li>
+            {/* <li><a href="mailto:carloszubiletesanchez@gmail.com" className="footer__link">Contacto</a></li> */}
           </ul>
         </div>
 
         <div className="footer__section footer__social">
-          <h2 className="footer__title">Follow Me</h2>
+          <h2 className="footer__title">Follow Us</h2>
           <ul className="footer__social-list">
             <li>
               <a href="https://github.com/carloszubilete" target="_blank" rel="noreferrer" className="footer__social-link">
