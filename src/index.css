@@ -2,13 +2,90 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background:radial-gradient(
+  /* background:radial-gradient(
     circle,
     rgba(97,172,203,1)25%,
     rgba(9,72,2555,1)10%,
-  );
+  ); */
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* light mode */
+:root {
+  --bg-color: #F5F5F5;        
+  --bg-gradient: radial-gradient(
+    circle,
+    rgba(97,172,203,1)25%,
+    rgba(9,72,2555,1)10%,
+  );
+
+  --text-color: #212121;      
+  --accent-color: #5767AA;     
+  --accent-variant: #29336C;    
+  --secondary-color: #DB2B39;  
+
+  /* Base */
+  --bg: #F5F5F5;             /* fondo principal */
+  --bg-surface: #FFFFFF;     /* tarjetas, input, nav */
+  --bg-muted: #E0E0E0;       /* fondos secundarios */
+  --text-primary: #212121;   /* texto principal */
+  --text-secondary: #555555; /* texto secundario, placeholders */
+  --border: #D1D5DB;         /* líneas, separadores */
+  --shadow: rgba(0, 0, 0, .1);
+
+  /* Acentos */
+  --brand: #1D4ED8;          /* azul vivo para botones/links */
+  --brand-hover: #1E40AF;    /* hover sobre brand */
+  --accent: #2563EB;         /* variante clara */
+  --accent-hover: #3B82F6;
+  
+  /* Alertas y estados */
+  --success: #16A34A;
+  --warning: #D97706;
+  --error:   #DC2626;
+}
+
+
+.darkmode {
+  --bg-color: #0d1117;             
+  --bg-gradient: radial-gradient(
+    circle,
+    rgba(22, 33, 62, 0.85) 25%,
+    rgba(9, 15, 35, 1) 100%
+  );
+  --text-color: #c9d1d9;            
+  --accent-color: #58a6ff;         
+  --accent-variant: #161b22;         
+  --secondary-color: #f85149;
+
+  /* Base */
+  --bg: #0D1117;             /* casi negro, pero azulado */
+  --bg-surface: #161B22;     /* superficies secundarias */
+  --bg-muted: #21262D;       /* paneles fijos */
+  --text-primary: #C9D1D9;   /* texto claro */
+  --text-secondary: #8B949E; /* texto menos importante */
+  --border: #30363D;         /* separadores oscuros */
+  --shadow: rgba(0, 0, 0, .5);
+  
+  /* Acentos */
+  --brand: #58A6FF;          /* azul destacado */
+  --brand-hover: #1F6FEB;    /* hover más oscuro */
+  --accent: #4790E7;         /* variante */
+  --accent-hover: #3C78C7;
+  
+  /* Alertas y estados */
+  --success: #3FB950;
+  --warning: #E3B341;
+  --error:   #F85149;       
+}
+
+
+body {
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  color: var(--text-color);
+  transition: background-color .5s ease, color .5s ease;
 }

@@ -1,13 +1,10 @@
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container } from "reactstrap";
 import AddTarea from "../components/AddTarea";
 import ListaTarea from "../components/ListTarea";
-// import useNewTarea from "../hooks/useAddTarea";
 import { useTareaContext } from '../context/useTareaContext';
+import '../styles/PageTarea.css'
 
 function PageTarea(){
-
-  // const {lista,handleFormik} = useNewTarea();
-
   const {addTarea} = useTareaContext();
 
   return (

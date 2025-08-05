@@ -5,9 +5,13 @@
 }
 
 main {
-  padding-bottom: 2rem;
   flex: 1;
 }
 
+/* DARK MODE */
+body.darkmode  {
+  background: radial-gradient(circle at center, #0f172a 0%, #1e293b 100%);
+  color: #e0f7fa;
+}
 
 

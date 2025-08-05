@@ -1,9 +1,9 @@
-import { FaBars , FaTimes } from 'react-icons/fa';
+import { FaBars , FaTimes , FaMoon, FaSun } from 'react-icons/fa';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css'
 
-function Navbar(){
+function Navbar({ toggleTheme, isDarkMode }){
 
   const navRef = useRef();
 
@@ -15,6 +15,11 @@ function Navbar(){
     <header className="navbar">
       <h3 className="navbar__logo">🎯 Ruleta</h3>
 
+      <button className="navbar__btn" 
+        onClick={toggleTheme} aria-label="Toggle theme">
+        {isDarkMode ? <FaSun /> : <FaMoon />}
+      </button> 
+
       <nav className="navbar__nav" ref={navRef}>
         <Link to="/" className="navbar__link" onClick={toggleNavbar}>Home</Link>
         <Link to="/ruleta" className="navbar__link" onClick={toggleNavbar}>Ruleta</Link>
@@ -25,7 +30,7 @@ function Navbar(){
         </button>
       </nav>
 
-      <button className="navbar__btn" onClick={toggleNavbar}>
+      <button className="navbar__btn navbar__btn--menu" onClick={toggleNavbar}>
         <FaBars />
       </button>
     </header>

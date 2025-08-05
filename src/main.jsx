@@ -5,7 +5,6 @@ import App from './App.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Componets
 import Home from './feature/main/components/Home.jsx';
-// import AddTarea from './feature/Tareas/components/AddTarea.jsx';
 import PageTarea from './feature/Tareas/page/PageTarea.jsx';
 import PageRuleta from './feature/ruleta-tarea/page/PageRuleta.jsx';
 

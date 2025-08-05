@@ -87,6 +87,38 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+/*DARK MODE*/
+.darkmode .ruleta__wheel {
+  background: radial-gradient(circle at center, #1a1a1a 10%, #2c3e50 60%, #0f0f0f 100%);
+  border: .625rem solid #444;
+}
+
+.darkmode .ruleta__segment {
+  background-color: hsl(var(--hue), 50%, 35%);
+  border-right: 1px solid #666;
+}
+
+.darkmode .ruleta__segment-text {
+  border: .5px dotted #888;
+  color: #f0f0f0;
+  text-shadow: none;
+}
+
+.darkmode .ruleta__tarea-seleccionada {
+  color: #f0f0f0;
+  text-shadow: 1px 1px 7px rgba(255,255,255,0.2);
+}
+
+.darkmode .btn-ruleta__btn-girar {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.darkmode .btn-ruleta__btn-girar:hover {
+  background-color: #2563eb;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+}
 
 @media (max-width: 425px){
   .ruleta__wheel {

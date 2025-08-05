@@ -1,4 +1,5 @@
 .footer {
+  /* border: 2px solid red; */
   background-color: #1f2937;
   color: #e5e7eb;
   padding: 2rem;
@@ -80,6 +81,38 @@
   font-size: 0.85rem;
   color: #9ca3af;
 }
+
+/*DARK MODE , THE FOOTER BECOME IN LIGHT*/
+body.darkmode .footer {
+  background-color: #f9fafb; /* gris muy claro */
+  color: #1f2937; /* gris oscuro */
+  font-weight: 600;
+
+}
+
+body.darkmode  .footer__title {
+  color: #111827;
+}
+
+body.darkmode  .footer__description,
+body.darkmode  .footer__link,
+body.darkmode  .footer__social-link {
+  color: #374151;
+}
+
+body.darkmode  .footer__link:hover {
+  color: #0ea5e9; /* azul claro */
+}
+
+body.darkmode .footer__social-link:hover {
+  color: #0284c7;
+}
+
+body.darkmode  .footer__bottom {
+  border-top: 1px solid #d1d5db;
+  color: #6b7280;
+}
+
 
 /* Responsive Design */
 @media (min-width: 768px) {
